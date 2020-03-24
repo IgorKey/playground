@@ -11,8 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: ilammy/msvc-dev-cmd@v1
+      - name: cd
+        run: cd build/hi
       - name: Build something requiring CL.EXE
-        run: |
-          cd build/hi && lib /def:drilldotnet.def /out:libnative.lib && ls -la
+        run: lib /def:drilldotnet.def /out:libnative.lib
 
 
