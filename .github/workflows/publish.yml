@@ -11,8 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: ilammy/msvc-dev-cmd@v1
-      - name: cd
-        run: cd build/hi
+        working-directory: build/hi
       - name: ls
         run: dir
       - name: Build something requiring CL.EXE
