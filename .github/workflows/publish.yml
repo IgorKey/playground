@@ -1,0 +1,18 @@
+name: playground
+on:
+  push:
+    branches:
+      - master
+jobs:
+
+  linux_job:
+    name: Check xx platform
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ilammy/msvc-dev-cmd@v1
+      - name: Build something requiring CL.EXE
+        run: |
+          lib /def:libnative_symbols.def /out:libnative.lib
+
+
