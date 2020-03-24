@@ -13,6 +13,6 @@ jobs:
       - uses: ilammy/msvc-dev-cmd@v1
       - name: Build something requiring CL.EXE
         run: |
-          lib /def:libnative_symbols.def /out:libnative.lib
+          lib /def:drilldotnet.def /out:libnative.lib
 
 

@@ -1,0 +1,4 @@
+EXPORTS
+drilldotnet_symbols
+initialize_agent
+sendMessage
